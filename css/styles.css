@@ -1,4 +1,15 @@
-/* Body and Main Layout */
+:root {
+	--primary-color: #1a73e8;
+	--secondary-color: #4caf50;
+	--background-color: #f0f8ff;
+	--text-color: #555;
+	--cta-bg-color: #1a73e8;
+	--cta-hover-bg-color: #155bc0;
+	--overlay-bg-color: rgba(0, 0, 0, 0.3);
+	--white: #ffffff;
+	--black: #000000;
+}
+
 body {
 	margin: 0;
 	padding: 0;

@@ -1,25 +1,117 @@
-<section>
-	<h1>Welcome to Our Wellness Center</h1>
-	<p>Your journey to holistic well-being starts here.</p>
-</section>
+<div id="page-content">
+	<section class="hero">
+		<div class="hero-overlay">
+			<div class="hero-content">
+				<h1>Welcome to Our Wellness Center</h1>
+				<p>
+					Your journey to holistic well-being starts here. Discover our
+					exclusive services tailored for you.
+				</p>
+				<a
+					href="#packages"
+					onclick="loadPage('packages')"
+					class="hero-button"
+					>Explore Packages</a
+				>
+			</div>
+		</div>
+		<div class="video-container">
+			<iframe
+				src="https://www.youtube.com/embed/q0mbKsKG-ng?autoplay=1&mute=1&loop=1&start=28&end=259&playlist=q0mbKsKG-ng"
+				title="YouTube video background"
+				allow="autoplay; fullscreen"
+				allowfullscreen></iframe>
+		</div>
+	</section>
+</div>
 
 <style>
-	/* Home Page Specific Styles */
-	section {
+	/* Hero Styles */
+	.hero {
+		position: relative;
+		height: 80vh;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		overflow: hidden;
+	}
+
+	.video-container iframe {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		border: none;
+		z-index: 0;
+		transform: scale(1.5);
+		transform-origin: center;
+	}
+
+	.hero-overlay {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background: var(--overlay-bg-color); /* Use variable */
+		z-index: 1;
+	}
+
+	.hero-content {
+		position: relative;
+		z-index: 2;
+		color: var(--white); /* Use white color variable */
 		text-align: center;
 		padding: 20px;
-		background-color: #f0f8ff;
-		border-radius: 10px;
-		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+		max-width: 600px;
+		margin: auto;
 	}
 
-	h1 {
-		font-size: 2rem;
-		color: #1a73e8;
+	.hero-content h1 {
+		font-size: 3rem;
+		font-weight: bold;
+		margin-bottom: 1rem;
+		color: var(--white);
 	}
 
-	p {
+	.hero-content p {
 		font-size: 1.2rem;
-		color: #555;
+		margin-bottom: 1.5rem;
+		color: var(--white);
+	}
+
+	.cta-buttons {
+		display: flex;
+		justify-content: center;
+		gap: 1rem;
+	}
+
+	.cta-button {
+		padding: 10px 20px;
+		font-size: 1rem;
+		border-radius: 5px;
+		text-decoration: none;
+		text-align: center;
+		cursor: pointer;
+		transition: background-color 0.3s ease;
+	}
+
+	.cta-white {
+		background-color: var(--white); /* Use white color */
+		color: var(--white); /* Use primary color */
+	}
+
+	.cta-white:hover {
+		background-color: #f1f1f1;
+	}
+
+	.cta-blue {
+		background-color: var(--cta-bg-color); /* Use CTA background color */
+		color: var(--white); /* Use white color */
+	}
+
+	.cta-blue:hover {
+		background-color: var(--cta-hover-bg-color); /* Use CTA hover color */
 	}
 </style>

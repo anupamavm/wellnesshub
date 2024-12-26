@@ -1,23 +1,238 @@
-<section>
-	<h1>Contact Us</h1>
-	<form>
-		<label for="name">Name</label>
-		<input
-			type="text"
-			id="name"
-			name="name"
-			required />
-		<label for="email">Email</label>
-		<input
-			type="email"
-			id="email"
-			name="email"
-			required />
-		<label for="message">Message</label>
-		<textarea
-			id="message"
-			name="message"
-			required></textarea>
-		<button type="submit">Send</button>
-	</form>
+<section id="contact">
+  <h1>📬 Contact Us</h1>
+  <p>
+    We’d love to hear from you! Whether it's an inquiry or a booking, feel free
+    to reach out.
+  </p>
+
+  <!-- Inquiry Form -->
+  <h2>✉️ General Inquiries</h2>
+  <form
+    action="mailto:your-email@example.com"
+    method="post"
+    enctype="text/plain"
+    class="inquiry-form"
+  >
+    <div class="form-row">
+      <div class="form-group">
+        <label for="inquiry-name">Name</label>
+        <input
+          type="text"
+          id="inquiry-name"
+          name="name"
+          placeholder="Your Name"
+          required
+        />
+      </div>
+      <div class="form-group">
+        <label for="inquiry-email">Email</label>
+        <input
+          type="email"
+          id="inquiry-email"
+          name="email"
+          placeholder="Your Email"
+          required
+        />
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="inquiry-message">Message</label>
+      <textarea
+        id="inquiry-message"
+        name="message"
+        placeholder="Your Message"
+        required
+      ></textarea>
+    </div>
+    <button type="submit">📨 Send Inquiry</button>
+  </form>
+
+  <!-- Booking Form -->
+  <h2>📅 Book a Session</h2>
+  <form class="booking-form">
+    <div class="form-row">
+      <div class="form-group">
+        <label for="booking-name">Name</label>
+        <input
+          type="text"
+          id="booking-name"
+          name="name"
+          placeholder="Your Name"
+          required
+        />
+      </div>
+      <div class="form-group">
+        <label for="booking-phone">Telephone</label>
+        <input
+          type="tel"
+          id="booking-phone"
+          name="phone"
+          placeholder="Your Phone Number"
+          required
+        />
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group">
+        <label for="booking-email">Email</label>
+        <input
+          type="email"
+          id="booking-email"
+          name="email"
+          placeholder="Your Email"
+          required
+        />
+      </div>
+      <div class="form-group">
+        <label for="session">Session</label>
+        <select id="session" name="session" required>
+          <option value="" disabled selected>Select a Session</option>
+          <!-- Budget Packages -->
+          <optgroup label="💼 Budget Packages">
+            <option value="relaxation-starter">🌿 Relaxation Starter</option>
+            <option value="quick-refresh">⚡ Quick Refresh</option>
+          </optgroup>
+
+          <!-- Premium Packages -->
+          <optgroup label="🌟 Premium Packages">
+            <option value="wellness-retreat">🏝️ Wellness Retreat</option>
+            <option value="premium-spa-bliss">🛁 Premium Spa Bliss</option>
+          </optgroup>
+
+          <!-- VIP Packages -->
+          <optgroup label="👑 VIP Packages">
+            <option value="elite-wellness-experience">
+              🏖️ Elite Wellness Experience
+            </option>
+            <option value="ultimate-spa-retreat">
+              🌺 Ultimate Spa Retreat
+            </option>
+          </optgroup>
+        </select>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group">
+        <label for="booking-date">Date</label>
+        <input type="date" id="booking-date" name="date" required />
+      </div>
+      <div class="form-group">
+        <label for="booking-time">Time</label>
+        <input type="time" id="booking-time" name="time" required />
+      </div>
+    </div>
+    <button type="submit">📅 Book Now</button>
+  </form>
+
+  <style>
+    /* General Contact Section Styling */
+    #contact {
+      margin: 0;
+      padding: 0px 20px;
+      text-align: center;
+    }
+
+    #contact h1 {
+      font-size: 2.5rem;
+      font-weight: bold;
+      margin-bottom: 20px;
+      color: var(--text-color);
+    }
+
+    #contact h2 {
+      font-size: 1.8rem;
+      margin-top: 30px;
+      margin-bottom: 15px;
+      color: var(--text-color);
+    }
+
+    #contact p {
+      font-size: 1.2rem;
+      color: var(--text-color);
+      margin-bottom: 40px;
+    }
+
+    /* Form Styling */
+    form {
+      max-width: 700px;
+      margin: 30px auto;
+      background-color: var(--secondary-color);
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      text-align: left;
+    }
+
+    .form-row {
+      display: flex;
+      gap: 20px;
+      margin-bottom: 20px;
+    }
+
+    .form-group {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      margin: 0px 20px;
+      gap: 8px;
+    }
+
+    .form-group label {
+      font-size: 1rem;
+      font-weight: bold;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 1rem;
+    }
+
+    .form-group textarea {
+      height: 120px;
+      resize: none;
+    }
+
+    button {
+      margin-top: 20px;
+      width: 100%;
+      padding: 12px;
+      background-color: var(--primary-color);
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: var(--text-color);
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .form-row {
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      form {
+        width: 90%;
+        padding: 20px;
+      }
+
+      #contact h1 {
+        font-size: 2rem;
+      }
+
+      #contact h2 {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
 </section>

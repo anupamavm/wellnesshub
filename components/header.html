@@ -1,60 +1,79 @@
 <header>
-	<nav>
-		<ul>
-			<li>
-				<a
-					href="#"
-					onclick="loadPage('home')"
-					>Home</a
-				>
-			</li>
-			<li>
-				<a
-					href="#"
-					onclick="loadPage('packages')"
-					>Packages</a
-				>
-			</li>
-			<li>
-				<a
-					href="#"
-					onclick="loadPage('facilities')"
-					>Facilities</a
-				>
-			</li>
-			<li>
-				<a
-					href="#"
-					onclick="loadPage('about')"
-					>About</a
-				>
-			</li>
-			<li>
-				<a
-					href="#"
-					onclick="loadPage('contact')"
-					>Contact</a
-				>
-			</li>
-		</ul>
-	</nav>
+  <div class="logo">
+    <a href="#" onclick="loadPage('home')"
+      ><img src="../assests/logo.png" alt="Logo"
+    /></a>
+  </div>
+  <nav>
+    <ul>
+      <li>
+        <a href="#Home" onclick="loadPage('home')">Home</a>
+      </li>
+      <li>
+        <a href="#Packages" onclick="loadPage('packages')">Packages</a>
+      </li>
+      <li>
+        <a href="#Facilities" onclick="loadPage('facilities')">Facilities</a>
+      </li>
+      <li>
+        <a href="#About" onclick="loadPage('about')">About</a>
+      </li>
+      <li>
+        <a href="#Contact" onclick="loadPage('contact')">Contact</a>
+      </li>
+    </ul>
+  </nav>
 </header>
 
 <style>
-	header {
-		padding: 10px 20px;
-		
-	}
-	header nav ul {
-		display: flex;
-		list-style-type: none;
-		justify-content: space-around;
-	}
-	header nav ul li a {
-		text-decoration: none;
-		color: var(--text-color) ;
-	}
-	nav ul li a:hover {
-		color: var(--primary-color) ;
-}
+  /* Header Styling */
+  header {
+    padding: 20px 20px;
+    text-align: center;
+  }
+
+  /* Logo Styling */
+  .logo {
+    margin-bottom: 30px;
+  }
+
+  .logo img {
+    max-width: 80px; /* Adjust the size of your logo */
+    height: auto;
+  }
+
+  /* Navigation Styling */
+  header nav ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    list-style-type: none;
+    gap: 80px; /* Increased spacing between navigation links */
+    padding: 0;
+    margin: 0;
+  }
+
+  header nav ul li a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 1.1rem;
+    font-weight: 500;
+    transition: color 0.3s;
+  }
+
+  header nav ul li a:hover {
+    color: var(--primary-color);
+  }
+
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    header nav ul {
+      flex-direction: column;
+      gap: 15px; /* Adjusted for smaller screens */
+    }
+
+    .logo img {
+      max-width: 120px;
+    }
+  }
 </style>

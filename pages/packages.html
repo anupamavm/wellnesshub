@@ -1,4 +1,226 @@
-<section>
-	<h1>Our Packages</h1>
-	<p>Choose from our exclusive packages to suit your needs.</p>
+<!-- Packages Page -->
+<section id="packages" class="packages-page">
+  <h1>Our Packages</h1>
+  <p>Choose from our exclusive packages to suit your needs.</p>
+
+  <!-- Budget Section -->
+  <section class="package-category">
+    <h2>💼 Budget Packages</h2>
+    <div class="package-container">
+      <div class="package-card">
+        <div class="package-details">
+          <h3>Relaxation Starter</h3>
+          <p>Basic spa and relaxation therapy for beginners.</p>
+          <ul>
+            <li>30-minute massage session</li>
+            <li>Herbal tea on arrival</li>
+            <li>Access to relaxation lounge</li>
+          </ul>
+          <span class="price">LKR 5,000</span>
+        </div>
+        <img src="images/budget1.jpg" alt="Relaxation Starter" />
+      </div>
+      <div class="package-card">
+        <div class="package-details">
+          <h3>Quick Refresh</h3>
+          <p>A short but effective wellness session.</p>
+          <ul>
+            <li>45-minute massage therapy</li>
+            <li>Essential oils included</li>
+            <li>Complimentary wellness consultation</li>
+          </ul>
+          <span class="price">LKR 7,500</span>
+        </div>
+        <img src="images/budget2.jpg" alt="Quick Refresh" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Premium Section -->
+  <section class="package-category">
+    <h2>🌟 Premium Packages</h2>
+    <div class="package-container">
+      <div class="package-card">
+        <div class="package-details">
+          <h3>Wellness Retreat</h3>
+          <p>Full-day retreat with personalized therapies.</p>
+          <ul>
+            <li>Full-body massage session</li>
+            <li>Yoga and meditation classes</li>
+            <li>Personalized diet consultation</li>
+          </ul>
+          <span class="price">LKR 15,000</span>
+        </div>
+        <img src="images/premium1.jpg" alt="Wellness Retreat" />
+      </div>
+      <div class="package-card">
+        <div class="package-details">
+          <h3>Premium Spa Bliss</h3>
+          <p>Luxurious spa treatments for deep relaxation.</p>
+          <ul>
+            <li>90-minute deep tissue massage</li>
+            <li>Hot stone therapy</li>
+            <li>Access to VIP spa suite</li>
+          </ul>
+          <span class="price">LKR 20,000</span>
+        </div>
+        <img src="images/premium2.jpg" alt="Premium Spa Bliss" />
+      </div>
+    </div>
+  </section>
+
+  <!-- VIP Section -->
+  <section class="package-category">
+    <h2>👑 VIP Packages</h2>
+    <div class="package-container">
+      <div class="package-card">
+        <div class="package-details">
+          <h3>Elite Wellness Experience</h3>
+          <p>Exclusive therapies with top-tier services.</p>
+          <ul>
+            <li>Private spa suite with ocean view</li>
+            <li>Customized therapy plan</li>
+            <li>Gourmet wellness meals</li>
+          </ul>
+          <span class="price">LKR 50,000</span>
+        </div>
+        <img src="images/vip1.jpg" alt="Elite Wellness Experience" />
+      </div>
+      <div class="package-card">
+        <div class="package-details">
+          <h3>Ultimate Spa Retreat</h3>
+          <p>Two-day luxury spa experience with gourmet meals.</p>
+          <ul>
+            <li>Two full-day therapy sessions</li>
+            <li>Luxury accommodation</li>
+            <li>Exclusive spa concierge service</li>
+          </ul>
+          <span class="price">LKR 75,000</span>
+        </div>
+        <img src="images/vip2.jpg" alt="Ultimate Spa Retreat" />
+      </div>
+    </div>
+  </section>
 </section>
+
+<style>
+  /* Packages Page Styles */
+  .packages-page {
+    text-align: center;
+  }
+
+  .packages-page h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    color: var(--text-color);
+  }
+
+  .packages-page p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: var(--text-color);
+  }
+
+  /* Package Category */
+  .package-category {
+    margin-top: 40px;
+    text-align: center;
+  }
+
+  .package-category h2 {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    font-weight: bold;
+  }
+
+  /* Package Container */
+  .package-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+
+  /* Package Card */
+  .package-card {
+    display: flex;
+    padding-left: 5%;
+    align-items: center;
+    background: var(--secondary-color);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px var(--overlay-bg-color);
+    width: 90%;
+    height: 300px;
+    overflow: hidden;
+    text-align: left;
+  }
+
+  .package-card img {
+    width: 40%;
+    height: 100%;
+    object-fit: cover;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+
+  .package-details {
+    padding: 20px;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .package-details h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: var(--text-color);
+  }
+
+  .package-details p {
+    font-size: 1rem;
+    color: var(--text-color);
+    margin-bottom: 10px;
+  }
+
+  /* Package Details List */
+  .package-details ul {
+    list-style-type: disc;
+    margin: 10px 0;
+    padding-left: 20px;
+    font-size: 0.95rem;
+    color: var(--text-color);
+  }
+
+  .package-details ul li {
+    margin-bottom: 5px;
+  }
+
+  .package-details .price {
+    font-size: 1.2rem;
+    color: var(--primary-color);
+    font-weight: bold;
+    margin-top: 10px;
+  }
+
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .package-card {
+      flex-direction: column;
+      height: auto;
+    }
+
+    .package-card img {
+      width: 100%;
+      height: 200px;
+      border-radius: 10px 10px 0 0;
+    }
+
+    .package-details {
+      width: 100%;
+      text-align: center;
+    }
+  }
+</style>

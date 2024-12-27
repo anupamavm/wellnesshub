@@ -13,7 +13,10 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: "Roboto", sans-serif;
+  font-family: "Playwrite US Modern", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -37,8 +40,4 @@ nav ul {
 nav ul li a {
   text-decoration: none;
   color: var(--text-color);
-}
-
-nav ul li a:hover {
-  /* text-decoration: underline; */
 }

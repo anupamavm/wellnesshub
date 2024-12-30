@@ -8,10 +8,11 @@
   <!-- Inquiry Form -->
   <h2>✉️ General Inquiries</h2>
   <form
-    action="mailto:contact@wellnesshub.com?subject=General%20Inquery"
+    action="mailto:contact@wellnesshub.com?subject=General%20Inquiry"
     method="post"
     enctype="text/plain"
     class="inquiry-form"
+    onsubmit="return validateInquiryForm()"
   >
     <div class="form-row">
       <div class="form-group">
@@ -49,12 +50,12 @@
 
   <!-- Booking Form -->
   <h2>📅 Book a Session</h2>
-
   <form
     action="mailto:contact@wellnesshub.com?subject=Booking%20Request"
     method="post"
     enctype="text/plain"
     class="booking-form"
+    onsubmit="return validateBookingForm()"
   >
     <div class="form-row">
       <div class="form-group">
@@ -98,13 +99,11 @@
             <option value="relaxation-starter">🌿 Relaxation Starter</option>
             <option value="quick-refresh">⚡ Quick Refresh</option>
           </optgroup>
-
           <!-- Premium Packages -->
           <optgroup label="🌟 Premium Packages">
             <option value="wellness-retreat">🏝️ Wellness Retreat</option>
             <option value="premium-spa-bliss">🛁 Premium Spa Bliss</option>
           </optgroup>
-
           <!-- VIP Packages -->
           <optgroup label="👑 VIP Packages">
             <option value="elite-wellness-experience">
@@ -129,6 +128,41 @@
     </div>
     <button type="submit">📅 Book Now</button>
   </form>
+
+  <script>
+    // Validate Inquiry Form
+    function validateInquiryForm() {
+      const email = document.getElementById("inquiry-email").value;
+      const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+      if (!emailPattern.test(email)) {
+        alert("❌ Please enter a valid email address.");
+        return false;
+      }
+      return true;
+    }
+
+    // Validate Booking Form
+    function validateBookingForm() {
+      const email = document.getElementById("booking-email").value;
+      const phone = document.getElementById("booking-phone").value;
+
+      const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+      const phonePattern = /^\d{10}$/; // Exactly 10 digits
+
+      if (!emailPattern.test(email)) {
+        alert("❌ Please enter a valid email address.");
+        return false;
+      }
+
+      if (!phonePattern.test(phone)) {
+        alert("❌ Please enter a valid 10-digit phone number.");
+        return false;
+      }
+
+      return true;
+    }
+  </script>
 
   <style>
     /* General Contact Section Styling */
@@ -179,7 +213,6 @@
       flex: 1;
       display: flex;
       flex-direction: column;
-      margin: 0px 20px;
       gap: 8px;
     }
 
@@ -191,21 +224,14 @@
     .form-group input,
     .form-group select,
     .form-group textarea {
-      width: 100%;
       padding: 12px;
       border: 1px solid #ccc;
       border-radius: 6px;
       font-size: 1rem;
     }
 
-    .form-group textarea {
-      height: 120px;
-      resize: none;
-    }
-
     button {
       margin-top: 20px;
-      width: 100%;
       padding: 12px;
       background-color: var(--primary-color);
       color: #fff;
@@ -213,32 +239,6 @@
       border-radius: 6px;
       font-size: 1rem;
       cursor: pointer;
-      transition: background-color 0.3s;
-    }
-
-    button:hover {
-      background-color: var(--text-color);
-    }
-
-    /* Responsive Design */
-    @media (max-width: 768px) {
-      .form-row {
-        flex-direction: column;
-        gap: 15px;
-      }
-
-      form {
-        width: 90%;
-        padding: 20px;
-      }
-
-      #contact h1 {
-        font-size: 2rem;
-      }
-
-      #contact h2 {
-        font-size: 1.5rem;
-      }
     }
   </style>
 </section>
